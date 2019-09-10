@@ -10,12 +10,27 @@ const rock_div = document.getElementById("r");
 const paper_div = document.getElementById("p");
 const scissors_div = document.getElementById("s");
 
-rock_div.addEventListener('click', function(){
-    console.log("You clicke rock!"); 
-});
-paper_div.addEventListener('click', function(){
-    console.log("You clicke paper!"); 
-});
-scissors_div.addEventListener('click', function(){
-    console.log("You clicke scissors!"); 
-});
+const getComputerChoice = function () {
+    const choices = ["r", "p", "s"];
+    const randonNumber = Math.floor(Math.random() * 3); //gets random number between 0 -3
+    return choices[randonNumber];
+}
+getComputerChoice();
+console.log('getComputerChoice():', getComputerChoice())
+const game = function (userChoice) {
+
+}
+const main = function () {
+    rock_div.addEventListener('click', function () {
+        game("r");
+    });
+    paper_div.addEventListener('click', function () {
+        game("p");
+
+    });
+    scissors_div.addEventListener('click', function () {
+        game("s");
+    });
+}
+
+main();
