@@ -1,0 +1,16 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #24272E;
+}
+header{
+    padding: 20px;
+    background: white;
+}
+header > h1{
+    color: #25272E;
+    text-align: center;
+}
