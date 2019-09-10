@@ -18,20 +18,21 @@ const getComputerChoice = function () {
     return choices[randonNumber];
 }
 
-const win = function(user, computer){
+const win = function(userChoice, computerChoice){
     userScore++;
     userScore_span.innerHTML = userScore;
     computerScore_span.innerHTML = computerScore;
-    result_p.innerHTML = `${user}${smUserWord} beats ${computer}${smComputerWord}. You Win!`
+    result_p.innerHTML = `${userChoice}${smUserWord} beats ${computerChoice}${smComputerWord}. You Win!`;
+    document.getElementById(userChoice).classList('green-glow')
 }
-const lose = function(user, computer){
+const lose = function(userChoice, computerChoice){
     computerScore++;
     userScore_span.innerHTML = userScore;
     computerScore_span.innerHTML = computerScore;
-    result_p.innerHTML = `${user}${smUserWord} loses to ${computer}${smComputerWord}. You lost!`  
+    result_p.innerHTML = `${userChoice}${smUserWord} loses to ${computerChoice}${smComputerWord}. You lost!` ; 
 }
-const draw = function(user, computer){
-    result_p.innerHTML = `${user}${smUserWord} draws with ${computer}${smComputerWord}. It's a draw!`    
+const draw = function(userChoice, computerChoice){
+    result_p.innerHTML = `${userChoice}${smUserWord} draws with ${computerChoice}${smComputerWord}. It's a draw!` ;   
 }
 const game = function (userChoice) {
     const computerChoice = getComputerChoice();
