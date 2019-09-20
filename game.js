@@ -23,7 +23,7 @@ const win = function(userChoice, computerChoice){
     userScore_span.innerHTML = userScore;
     computerScore_span.innerHTML = computerScore;
     result_p.innerHTML = `${userChoice}${smUserWord} beats ${computerChoice}${smComputerWord}. You Win!`;
-    document.getElementById(userChoice).classList('green-glow')
+    document.getElementById(userChoice).classList.add('green-glow')
 }
 const lose = function(userChoice, computerChoice){
     computerScore++;
